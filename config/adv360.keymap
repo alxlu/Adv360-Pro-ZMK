@@ -20,7 +20,7 @@
     };
 
   combos {
-    compatible = "zmk,keymap";
+    compatible = "zmk,combos";
     combo_ctrlspc {
       timeout-ms = <50>;
       key-position = <41 42>;

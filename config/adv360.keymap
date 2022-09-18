@@ -24,7 +24,7 @@
     combo_ctrlspc {
       timeout-ms = <50>;
       key-positions = <41 42>;
-      bindings = <&mt LCTRL SPACE>;
+      bindings = <&kp LC(SPACE)>;
     };
   };
 

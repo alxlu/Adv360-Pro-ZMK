@@ -84,7 +84,7 @@
     arrows {
       bindings = <
         &none  &none &none &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
-        &none  &none &kp w &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
+        &none  &none &kp W &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
         &none  &none &none &none &none &none  &none        &none &none             &none &none           &none &kp LEFT  &kp DOWN &kp UP &kp RIGHT  &none  &none
         &none  &none &none &none &none &kp B        &none  &none  &none &none &none &none &none  &none            &none &none &none &none  &none  &none
         &none  &none &none &none &none               &none &none &none             &none &none &none                  &none &none &none  &none  &none

@@ -36,6 +36,11 @@
       key-positions = <24 41>;
       bindings = <&kp LG(SPACE)>;
     };
+    commbo_meh {
+      timeout-ms = <30>;
+      key-positions = <49 50>;
+      bindings = <&kp LA(LC(LSHIFT))>;
+    };
   };
 
   keymap {
@@ -43,22 +48,24 @@
 
     default_layer {
       bindings = <
-        &kp EQUAL      &kp N1       &kp N2   &kp N3     &kp N4     &kp N5 &tog 1                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &mt LALT TAB   &kp Q        &kp W    &lt 4 E    &kp R      &kp T  &kp KP_NUMBER_1                                                      &kp KP_NUMBER_3 &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &mt LGUI ESC   &lt 1 A      &lt 5 S  &kp D      &kp F      &kp G  &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp EQUAL      &kp N1       &kp N2   &kp N3     &kp N4     &kp N5  &tog 1                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &mt LALT TAB   &kp Q        &kp W    &lt 4 E    &kp R      &kp T   &kp KP_NUMBER_1                                                      &kp KP_NUMBER_3 &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &mt LGUI ESC   &lt 1 A      &lt 5 S  &kp D      &kp F      &lt 7 G &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp H  &kp J  &kp K     &kp L    &kp SEMI &mt RGUI SQT
         &kp LSHFT      &mt LCTRL Z  &kp X    &kp C      &kp V      &kp B        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH &kp RSHFT
         &mo 2          &kp GRAVE    &kp CAPS &kp LEFT   &kp BKSP               &kp SPACE  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp ENTER               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
         >;
     };
+    // 1
     keypad {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3     &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp EQUAL  &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp MINUS  &kp F      &kp G  &none          &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL            &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C      &kp V      &kp B        &none    &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT   &kp RIGHT               &kp BKSP &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0               &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT         &mo 2
+        &kp EQUAL &kp N1    &kp N2   &kp N3     &kp N4     &kp N5    &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp EQUAL  &kp R      &kp GRAVE &none                                                                        &none &kp Y  &kp N7  &kp N8    &kp N9     &kp MINUS    &kp BSLH
+        &kp ESC   &kp A     &kp S    &kp MINUS  &kp UNDER  &kp G     &none          &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL            &none &kp H  &kp N4  &kp N5    &kp N6     &kp PLUS     &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C      &kp V      &kp B        &none    &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp N1  &kp N2    &kp N3     &kp ENTER    &kp RSHFT
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT   &kp LSHIFT              &kp BKSP &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0               &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT         &mo 2
       >;
     };
+    // 2
     fn {
       bindings = <
         &kp F1  &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                                          &mo 3 &kp F7  &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
@@ -68,6 +75,7 @@
         &trans  &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans  &trans  &trans
       >;
     };
+    // 3
     mod {
       bindings = <
         &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                  &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
@@ -77,20 +85,42 @@
         &none &none        &none        &bl BL_INC   &bl BL_DEC                           &rgb_ug RGB_TOG &bl BL_TOG &none                 &none      &bl BL_TOG &rgb_ug RGB_TOG                      &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
+    // 4
     tmux {
       bindings = <
         &kp EQUAL &kp LA(N1)    &kp LA(N2)   &kp LA(N3)   &kp LA(N4)     &kp LA(N5) &tog 1                                                                       &mo 3 &kp LA(N6) &kp LA(N7) &kp LA(N8)    &kp LA(N9)   &kp LA(N0)   &kp MINUS
         &kp TAB   &kp LA(Q)     &kp LC(A)    &kp LA(E)    &kp LA(Z)      &kp LA(T)  &kp KP_NUMBER_1                                                      &kp KP_NUMBER_3 &kp LA(N1)  &kp LA(N2)  &kp LA(N3)     &kp LA(N4)    &kp LA(N5)    &kp BSLH
-        &kp ESC   &kp LA(A)     &kp LA(S)    &kp LA(D)    &kp LA(F)      &kp LA(G)  &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp LA(H)  &kp LA(J)  &kp LA(K)     &kp LA(L)    &kp SEMI &kp SQT
+        &kp ESC   &kp LC(A)     &kp LA(S)    &kp LA(D)    &kp LA(F)      &kp LA(G)  &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp LA(H)  &kp LA(J)  &kp LA(K)     &kp LA(L)    &kp SEMI &kp SQT
         &kp LSHFT &kp LA(Z)     &kp LA(X)    &kp LA(C)    &kp LA(V)      &kp LA(B)        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp LA(N)  &kp LA(M)  &kp LA(COMMA) &kp LA(DOT)  &kp FSLH &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LSHIFT &kp LSHIFT               &kp LC(B)  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
       >;
     };
+    // 5
     arrows {
       bindings = <
         &none  &none &none &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
         &none  &none &kp W &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
         &none  &none &none &none &none &none  &none        &none &none             &none &none           &none &kp LEFT  &kp DOWN &kp UP &kp RIGHT  &none  &none
+        &none  &none &none &none &none &kp B        &none  &none  &none &none &none &none &none  &none            &none &none &none &none  &none  &none
+        &none  &none &none &none &none               &none &none &none             &none &none &none                  &none &none &none  &none  &none
+      >;
+    };
+    // 6
+    braces {
+      bindings = <
+        &none  &none &none &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
+        &none  &none &kp W &kp LBRC &kp RBRC &none  &none                                                          &none &none  &none &none &none  &none  &none
+        &none  &none &none &kp LPAR &kp RRPAR &none  &none        &none &none             &none &none           &none &kp LEFT  &kp DOWN &kp UP &kp RIGHT  &none  &none
+        &none  &none &none &kp LBKT &kp RBKT &kp B        &none  &none  &none &none &none &none &none  &none            &none &none &none &none  &none  &none
+        &none  &none &none &LT &GT               &none &none &none             &none &none &none                  &none &none &none  &none  &none
+      >;
+    };
+    // 7
+    browser {
+      bindings = <
+        &none  &none &none &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
+        &none  &none &kp W &kp LBRC &kp RBRC &none  &none                                                          &none &none  &none &kp LG(W) &kp LG(T)  &none  &none
+        &none  &none &none &kp LBKT &kp RBKT &none  &none        &none &none             &none &none           &none &none &kp LC(TAB) &kp LS(LC(TAB)) &kp LG(L)  &none  &none
         &none  &none &none &none &none &kp B        &none  &none  &none &none &none &none &none  &none            &none &none &none &none  &none  &none
         &none  &none &none &none &none               &none &none &none             &none &none &none                  &none &none &none  &none  &none
       >;

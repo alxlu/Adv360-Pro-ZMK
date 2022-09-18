@@ -59,7 +59,7 @@
     keypad {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3     &kp N4     &kp N5    &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp EQUAL  &kp R      &kp GRAVE &none                                                                        &none &kp Y  &kp N7  &kp N8    &kp N9     &kp MINUS    &kp BSLH
+        &kp TAB   &kp Q     &kp W    &kp EQUAL  &kp GT      &kp GRAVE &none                                                                        &none &kp Y  &kp N7  &kp N8    &kp N9     &kp MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp MINUS  &kp UNDER  &kp G     &none          &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL            &none &kp H  &kp N4  &kp N5    &kp N6     &kp PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C      &kp V      &kp B        &none    &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp N1  &kp N2    &kp N3     &kp ENTER    &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT   &kp LSHFT              &kp BKSP &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0               &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT         &mo 2

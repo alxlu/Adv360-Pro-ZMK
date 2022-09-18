@@ -52,7 +52,7 @@
         &mt LALT TAB   &kp Q        &kp W    &lt 4 E    &kp R      &kp T   &kp KP_NUMBER_1                                                      &kp KP_NUMBER_3 &kp Y  &kp U  &lt 6 I &kp O    &kp P    &kp BSLH
         &mt LGUI ESC   &lt 1 A      &lt 5 S  &kp D      &kp F      &lt 7 G &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp H  &kp J  &kp K     &kp L    &kp SEMI &mt RGUI SQT
         &kp LSHFT      &mt LCTRL Z  &kp X    &kp C      &kp V      &kp B        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH &kp RSHFT
-        &mo 2          &kp GRAVE    &kp CAPS &kp LEFT   &kp BKSP               &kp SPACE  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp ENTER               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &mo 2          &kp GRAVE    &kp CAPS &kp LGUI   &kp BKSP               &kp SPACE  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp ENTER               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
         >;
     };
     // 1

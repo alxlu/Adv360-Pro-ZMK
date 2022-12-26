@@ -43,14 +43,27 @@
     };
   };
 
+  macros {
+    ssh_kill: ssh_kill {
+      label = "ZM_ssh_kill"
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+          = <&macro_tap &kp ENTER>
+          , <&macro_tap &kp TILDE>
+          , <&macro_tap &kp DOT>
+          ;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
-        &kp EQUAL      &kp N1       &kp N2   &kp N3     &kp N4     &kp N5  &mo 3                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &mt LALT TAB   &kp Q        &kp W    &lt 4 E    &kp R      &kp T   &to 8                                                               &kp KP_NUMBER_3 &kp Y  &kp U  &lt 6 I &kp O    &kp P    &kp BSLH
-        &mt LGUI ESC   &lt 1 A      &lt 5 S  &kp D      &kp F      &lt 7 G &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp H  &kp J  &kp K     &kp L    &kp SEMI &mt RGUI SQT
+        &kp EQUAL      &kp N1       &kp N2   &kp N3     &kp N4     &kp N5  &mo 3                                                                       &mo 3   &kp N6   &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
+        &mt LALT TAB   &kp Q        &kp W    &lt 4 E    &kp R      &kp T   &to 8                                                               &kp PLUS &kp Y  &kp U    &lt 6 I   &kp O    &kp P    &kp BSLH
+        &mt LGUI ESC   &lt 1 A      &lt 5 S  &kp D      &kp F      &lt 7 G &kp EQUAL    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL  &kp MINUS &kp H  &kp J  &kp K     &kp L    &kp SEMI &mt RGUI SQT
         &kp LSHFT      &mt LCTRL Z  &kp X    &kp C      &kp V      &kp B        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp M  &kp COMMA &kp DOT  &mt RCTRL FSLH &kp RSHFT
         &mo 2          &kp GRAVE    &kp CAPS &kp LGUI   &kp BKSP               &kp SPACE  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp ENTER               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
         >;
@@ -60,7 +73,7 @@
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3     &kp N4     &kp N5    &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp EQUAL  &kp GT      &kp GRAVE &none                                                                        &none &kp Y  &kp N7  &kp N8    &kp N9     &kp MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp MINUS  &kp UNDER  &kp G     &none          &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL            &none &kp H  &kp N4  &kp N5    &kp N6     &kp PLUS     &kp SQT
+        &kp ESC   &kp A     &kp S    &kp MINUS  &kp UNDER  &kp TILDE     &none          &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL            &none &kp H  &kp N4  &kp N5    &kp N6     &kp PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp PLUS   &kp V      &kp B        &none    &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp N1  &kp N2    &kp N3     &kp ENTER    &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT   &kp LSHFT              &kp BKSP &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp N0                  &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT         &mo 2
       >;
@@ -89,10 +102,10 @@
     tmux {
       bindings = <
         &kp EQUAL &kp LA(N1)    &kp LA(N2)   &kp LA(N3)   &kp LA(N4)     &kp LA(N5) &tog 1                                                                       &mo 3 &kp LA(N6) &kp LA(N7) &kp LA(N8)    &kp LA(N9)   &kp LA(N0)   &kp MINUS
-        &kp TAB   &kp LA(Q)     &kp LC(A)    &kp LA(E)    &kp LA(Z)      &kp LA(T)  &kp KP_NUMBER_1                                                      &kp KP_NUMBER_3 &kp LA(N1)  &kp LA(N2)  &kp LA(N3)     &kp LA(N4)    &kp LA(N5)    &kp BSLH
+        &kp TAB   &ssh_kill     &kp LC(C)    &kp LA(E)    &kp LA(Z)      &kp LA(T)  &kp KP_NUMBER_1                                                      &kp KP_NUMBER_3 &kp LA(N1)  &kp LA(N2)  &kp LA(N3)     &kp LA(N4)    &kp LA(N5)    &kp BSLH
         &kp ESC   &kp LC(A)     &kp LA(S)    &kp LA(D)    &kp LA(F)      &kp LA(G)  &kp KP_NUMBER_2    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp LA(H)  &kp LA(J)  &kp LA(K)     &kp LA(L)    &kp SEMI &kp SQT
         &kp LSHFT &kp LA(Z)     &kp LA(X)    &kp LA(C)    &kp LA(V)      &kp LA(B)        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp LA(N)  &kp LA(M)  &kp LA(COMMA) &kp LA(DOT)  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LSHFT &kp LSHFT               &kp LC(B)  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp LA(ENTER)               &kp LA(SPACE) &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &mo 2     &kp GRAVE &kp CAPS &kp LSHFT &kp LSHFT               &kp LS(LA(ENTER))  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp LA(ENTER)               &kp LA(SPACE) &kp DOWN  &kp LBKT &kp RBKT &mo 2
       >;
     };
     // 5
@@ -132,7 +145,7 @@
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &to 0                                                      &kp KP_NUMBER_3 &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &to 0    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL                   &kp KP_NUMBER_4 &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT               &kp BKSP  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &mo 2          &kp GRAVE    &kp CAPS &kp LGUI   &kp BKSP               &kp SPACE  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp ENTER               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
         >;
     };
   };

@@ -120,8 +120,8 @@
     browser {
       bindings = <
         &none  &none &none &none &none &none  &none                                                          &none &none  &none &none &none  &none  &none
-        &none  &none &kp W &kp LBRC &kp RBRC &none  &none                                                          &none &none  &none &kp LG(W) &kp LG(T)  &none  &none
-        &none  &none &none &kp LBKT &kp RBKT &none  &none        &none &none             &none &none           &none &none &kp LC(TAB) &kp LS(LC(TAB)) &kp LG(L)  &none  &none
+        &none  &none &kp LS(LC(MINUS)) &kp LS(LC(E)) &kp RBRC &none  &none                                                          &none &none  &none &kp LG(W) &kp LG(T)  &none  &none
+        &none  &kp LS(LC(LBKT)) &kp LS(LC(EQUAL)) &kp LS(LC(RBKT)) &kp RBKT &none  &none        &none &none             &none &none           &none &none &kp LC(TAB) &kp LS(LC(TAB)) &kp LG(L)  &none  &none
         &none  &none &none &none &none &kp B        &none  &none  &none &none &none &none &none  &none            &none &none &none &none  &none  &none
         &none  &none &none &none &none               &none &none &none             &none &none &none                  &none &none &none  &none  &none
       >;
